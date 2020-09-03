@@ -5,8 +5,12 @@
 </head>
 <body>
   <script>
-  
-  
+  const choices = ["rock", "paper", "scissors"];
+//let the computer randomly choose one of the 3 options
+function computerPLay(){
+let computerChoice = choices[Math.floor(Math.random() * 3)];
+return computerChoice;
+}
   </script>
 </body>
 </html>

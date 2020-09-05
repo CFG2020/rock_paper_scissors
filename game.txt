@@ -22,6 +22,12 @@ while (!choices.include(userChoice)) {
 }
 return userChoice;
 }
+//declare a functions with 2 perameters: computer + user choice
+function playround(){
+    let userChoice = userPlay();
+    let computerChoice = computerPlay();
+}
+
   </script>
 </body>
 </html>

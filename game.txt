@@ -26,6 +26,24 @@ return userChoice;
 function playround(){
     let userChoice = userPlay();
     let computerChoice = computerPlay();
+
+// compare choices and determine a winner
+let result = computerChoice + " " + userChoice;
+console.log(result);
+
+if (computerChoice === userChoice){
+    alert("It's a tie, try again");
+    playround();
+} else if (result === "rock paper" || result === "paper scissors" || result === "scissors rock"){
+    alert("you win this round, ${userChoice} beats ${computerChoice}.");
+    userScore++;
+    console.log("User score: " + userScore);
+} else {
+    alert("You lose, ${computerChoice} beats ${userChoice}.");
+    computerScore++;
+    console.log("computer score:" + computerScore);
+}
+
 }
 
   </script>

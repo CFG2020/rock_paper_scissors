@@ -42,10 +42,20 @@ if (computerChoice === userChoice){
     alert("You lose, ${computerChoice} beats ${userChoice}.");
     computerScore++;
     console.log("computer score:" + computerScore);
+    }
 }
-
+//play 5 rounds, keep track and declare a winner
+let userScore = 0;
+let computerScore = 0;
+function playFiveround(){
+    let rounds = 1
+    for (let i = 1; i <= 5; i++) {
+        console.log("Round: " + round++);
+        playRound();
+    }
+    computerScore < userScore ? alert("You win!") : alert("You lose!");
 }
-
+playFiveRounds();
   </script>
 </body>
 </html>

@@ -11,6 +11,17 @@ function computerPLay(){
 let computerChoice = choices[Math.floor(Math.random() * 3)];
 return computerChoice;
 }
+// prompt a choise form the user. make it case insensitive.
+function userPlay() {
+let userChoice = prompt("Choose one");
+userChoice = userChoice.slice(0, 1).toUpperCase() + userChoice.slice(1).toLowerCase();
+
+while (!choices.include(userChoice)) {
+     alert("Wrong item!");
+     userPlay();
+}
+return userChoice;
+}
   </script>
 </body>
 </html>

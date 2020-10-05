@@ -1,0 +1,36 @@
+const selectionButton = document.querySelectorAll('[data-selection]')
+const SELECTIONS = [
+    {
+        name: 'rock', 
+        emoji:  '✊',
+        beats: 'scissors'
+    },
+    {
+        name: 'paper',
+        emoji: '✋',
+        beats: 'rock'
+    },
+    {
+        name: 'scissors',
+        emoji: '✌️',
+        beats: 'paper'
+    }
+]
+
+
+selectionButton.forEach(selectionButton =>{
+    selectionButton.addEventListener('click', e => {
+        const selectionName = selectionButton.dataset.selection
+        const selection = SELECTIONS.find(selection => selection.name === selectionName)
+        makeSelection(selection)
+    })
+})
+
+function makeSelection(selection) {
+    console.log(selection)
+}
+
+function randomSelection() {
+    const randomIndex = math.floor(math.random() * SELECTIONS.length)
+    return SELECTIONS[randomIndex]
+}
